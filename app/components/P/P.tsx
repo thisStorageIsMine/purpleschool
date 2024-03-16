@@ -18,3 +18,4 @@ const P =({size = "md", className, children, ...props}: ParagraphProps) => {
 }
 
 export { P };
+

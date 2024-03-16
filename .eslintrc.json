@@ -3,13 +3,16 @@
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "react-app"
   ],
 
   "root": true,
   "parser": "@typescript-eslint/parser",
   "plugins": [
-      "@typescript-eslint"
+      "@typescript-eslint",
+      "react-hooks"
   ],
   "rules": {
       "semi": "off",
@@ -21,6 +24,8 @@
           {
               "allowSingleExtends": true
           }
-      ]
+      ],
+      "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
   }
 }

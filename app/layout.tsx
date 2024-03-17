@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
+import { Header, Footer, Sidebar } from "../components";
 
 const notoSansKR = Noto_Sans_KR({ subsets: ["latin", "cyrillic"] });
 
@@ -16,7 +17,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={notoSansKR.className}>{children}</body>
+      <body className={notoSansKR.className}>
+        <div className="
+                        min-h-screen
+                        grid 
+                        gap-[0_30px]
+                        grid-rows-[auto_1fr_auto]
+                        grid-cols-[minmax(320px,_1fr)]
+                        [grid-template-areas:'header''main''footer']
+                        sm:grid-cols-[auto_230px_minmax(320px,_1200px),_auto]
+                        sm:[grid-template-areas:'._header_header_.''._sidebar_main_.''footer_footer_footer_footer']
+                        ">  {/* Мне нет оправдания */}
+          <Header className="[grid-area:header;] sm:hidden"/>
+          <Sidebar className="[grid-area:sidebar;] hidden sm:block"/>
+          <main className="[grid-area:main;]">
+            {children}
+          </main>
+          <Footer className="[grid-area:footer;]"/>
+        </div>
+      </body>
     </html>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 import Image from "next/image";
-import { Htag, Button, P, Tag, Timer, Rating } from "./components"
+import { Htag, Button, P, Tag, Timer, Rating } from "../components"
 import { useState } from "react";
 
 export default function Home() {
@@ -9,8 +9,9 @@ export default function Home() {
   return (
     <main >
 
-
-      <Rating  className="ml-5" rating={rating} setRating={setRating} isEditable={true}/>
+      <Htag className="" h="1">
+        Главная страница!
+      </Htag>
 
     </main> 
   );

@@ -1,5 +1,5 @@
 import { Htag } from "../../components"
-import { getMenu } from "@/api/Menu";
+import { getMenu } from "@/api/menu";
 
 
 
